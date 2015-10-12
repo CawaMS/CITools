@@ -1,10 +1,10 @@
 ﻿Import-Module 'C:\Program Files (x86)\Microsoft SDKs\Azure\PowerShell\ServiceManagement\Azure'
 Import-Module 'C:\Program Files (x86)\Microsoft SDKs\Azure\PowerShell\ResourceManager\AzureResourceManager'
 
-$ServicePrincipalPassword = ConvertTo-SecureString "test.123" -AsPlainText -Force
-$ServicePrincipalCredentials = New-Object System.Management.Automation.PSCredential ("2759983a-7c50-484a-b93c-e116e71ed16e", $ServicePrincipalPassword)
-Add-AzureAccount -Credential $ServicePrincipalCredentials -ServicePrincipal -Tenant 72f988bf-86f1-41af-91ab-2d7cd011db47
-Select-AzureSubscription -SubscriptionId 9de7ded6-0ad3-43e6-87b8-17d93e3ff695
+$ServicePrincipalPassword = ConvertTo-SecureString "<Password>" -AsPlainText -Force
+$ServicePrincipalCredentials = New-Object System.Management.Automation.PSCredential ("<ServicePrincipalID>", $ServicePrincipalPassword)
+Add-AzureAccount -Credential $ServicePrincipalCredentials -ServicePrincipal -Tenant <ServicePrincipalTenantID>
+Select-AzureSubscription -SubscriptionId <ServicePrincipalSubscriptionID>
 
 Switch-AzureMode AzureResourceManager
 
