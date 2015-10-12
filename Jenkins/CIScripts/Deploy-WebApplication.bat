@@ -1,0 +1,1 @@
+"C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" -source:package="C:\Users\vmuser\.jenkins\jobs\ci\workspace\WebApplication3\obj\Debug\Package\WebApplication3.zip" -dest:auto,ComputerName=40.112.190.174,username=vmuser,password=test.123 -verb:sync -allowUntrusted
